@@ -241,7 +241,7 @@ def load_ensemble_models(model_paths, device='cpu'):
         print(f"  Fold {i+1} | Val R\u00b2: {fr.get('val_r2', 'N/A')}")
     return models
 
-model_paths = sorted(MODEL_DIR.glob("MSTox_optimized_fold*.pth"))
+model_paths = sorted(MODEL_DIR.glob("MSTox_fold*.pth"))
 if not model_paths:
     raise FileNotFoundError(
         f"No model files found in {MODEL_DIR}. "
